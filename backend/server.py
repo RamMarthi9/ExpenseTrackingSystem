@@ -46,3 +46,15 @@ def get_analytics(date_range: DateRange):
             "percentage": percentage
         }
     return breakdown
+
+@app.get("/analytics/monthly")
+def get_monthly_analytics():
+    data = db_helper.fetch_monthly_expense_summary()
+
+    if not data:
+        return {}
+
+    return {
+        row["month"]: row["total"]
+        for row in data
+    }

@@ -77,11 +77,35 @@ def fetch_expense_summary(start_date, end_date):
         data = cursor.fetchall()
         return data
 
+def fetch_monthly_expense_summary():
+    query = """
+        SELECT
+            DATE_FORMAT(expense_date, '%Y-%m') AS month,
+            SUM(amount) AS total
+        FROM expenses
+        GROUP BY month
+        ORDER BY month;
+    """
+
+    with get_db_cursor() as cursor:
+        cursor.execute(query)
+        result = cursor.fetchall()
+
+    # result is a list of dicts, not tuples
+    return [
+        {
+            "month": row["month"],
+            "total": float(row["total"])
+        }
+        for row in result
+    ]
+
 if __name__ == "__main__":
     # fetch_expenses_for_date("2024-08-01")
     # insert_expense("2024-08-25", "40", "Food", "Bonda")
-    delete_expenses_for_date("2024-08-10")
+    # delete_expenses_for_date("2024-08-10")
     # print(fetch_expenses_for_date("2024-08-15"))
     # fetch_expense_summary("2024-01-01","2024-12-31")
     # for expense in summary:
     # print(expense)
+    fetch_monthly_expense_summary()
