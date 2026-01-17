@@ -9,7 +9,7 @@ This project is an expense management system that consists of a Streamlit fronte
 - **backend/**: Contains the FastAPI backend server code.
 - **tests/**: Contains the test cases for both frontend and backend.
 - **requirements.txt**: Lists the required Python packages.
-- **README.md**: Provides an overview and instructions for the project.
+- **ReadMe.md**: Provides an overview and instructions for the project.
 
 
 ## Setup Instructions
@@ -32,3 +32,4 @@ This project is an expense management system that consists of a Streamlit fronte
     streamlit run frontend/app.py
 
    ```
+
