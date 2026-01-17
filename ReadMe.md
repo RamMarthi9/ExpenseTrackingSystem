@@ -15,6 +15,7 @@ This project is an expense management system that consists of a Streamlit fronte
 
 1. **Clone the repository**:
    ```bash
+   https://github.com/RamMarthi9/ExpenseTrackingSystem
    cd expense-management-system
    ```
 1. **Install dependencies:**:   
