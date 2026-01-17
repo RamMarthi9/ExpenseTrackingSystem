@@ -9,13 +9,14 @@ This project is an expense management system that consists of a Streamlit fronte
 - **backend/**: Contains the FastAPI backend server code.
 - **tests/**: Contains the test cases for both frontend and backend.
 - **requirements.txt**: Lists the required Python packages.
+- **README.md**: Provides an overview and instructions for the project.
 
 
 ## Setup Instructions
 
 1. **Clone the repository**:
    ```bash
-   https://github.com/RamMarthi9/ExpenseTrackingSystem
+   git clone https://github.com/yourusername/expense-management-system.git
    cd expense-management-system
    ```
 1. **Install dependencies:**:   
@@ -30,3 +31,18 @@ This project is an expense management system that consists of a Streamlit fronte
    ```commandline
     streamlit run frontend/app.py
    ```
+## 📸 Application Screenshots
+
+### ➕ Add / Update Expenses
+![Add Update Screen](docs/screenshots/add_update.jpg)
+
+---
+
+### 📊 Analytics by Category
+
+![Category Analytics](docs/screenshots/analytics_by_category.jpg)
+
+---
+
+### 📈 Monthly Expense Analytics
+![Monthly Analytics](docs/screenshots/monthly_analytics.jpg)
